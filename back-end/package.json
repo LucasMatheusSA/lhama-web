@@ -1,22 +1,19 @@
 {
-  "name": "projeto-help",
+  "name": "upload-avatar-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A service to upload files to local directory.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "start": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Lucas Matheus",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cheerio": "^1.0.0-rc.3",
-    "express": "^4.17.1",
-    "i": "^0.3.6",
-    "mongodb": "^3.3.4",
-    "request": "^2.88.0"
-  },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "multer": "^1.4.1"
   }
 }

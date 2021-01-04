@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <docType>RG_BACK</docType>
+  <fields>
+    <field>
+      <name>NUM_RG</name>
+      <description>Registro geral</description>
+      <type>DOCNUMBER</type>
+    </field>
+    <field>
+      <name>DATA_EXPEDICAO</name>
+      <description>Expedicao</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NAME</name>
+      <description>Nome</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>FILIACAO_A</name>
+      <description>Filiacao A</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>FILIACAO_B</name>
+      <description>Filiacao B</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NATURALIDADE</name>
+      <description>Naturalidade</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>DATA_NASCIMENTO</name>
+      <description>Data de nascimento</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NUM_CPF</name>
+      <description>Numero do CPF</description>
+      <type>DOCNUMBER</type>
+    </field>
+  </fields>
+  <extraFields>
+    <field>
+      <name>FiliationLines</name>
+      <description>Linhas da filiação</description>
+      <type>NUMBER</type>
+    </field>
+    <field>
+      <name>HasFiliationConnector</name>
+      <description>Filiação possui conector</description>
+      <type>BOOLEAN</type>
+    </field>
+  </extraFields>
+</template>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <docType>GENERIC</docType>
+  <fields>
+    <field>
+      <name>NOME</name>
+      <description>Nome</description>
+      <type>NAME</type>
+    </field>
+    <field>
+      <name>DATA_NASCIMENTO</name>
+      <description>Data de nascimento</description>
+      <type>DATE</type>
+    </field>
+    <field>
+      <name>NUM_INSCR</name>
+      <description>Número de inscrição</description>
+      <type>DOCNUMBER</type>
+    </field>
+    <field>
+      <name>ZONA</name>
+      <description>Zona</description>
+      <type>NUMBER</type>
+    </field>
+    <field>
+      <name>SECAO</name>
+      <description>Seção</description>
+      <type>NUMBER</type>
+    </field>
+    <field>
+      <name>EMISSOR</name>
+      <description>Municipio/UF</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>DT_EMISS</name>
+      <description>Data de emissão</description>
+      <type>DATE</type>
+    </field>
+  </fields>
+  <extraFields />
+</template>

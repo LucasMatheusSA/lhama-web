@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <docType>CNH</docType>
+  <fields>
+    <field>
+      <name>NOME</name>
+      <description>Nome</description>
+      <type>NAME</type>
+    </field>
+    <field>
+      <name>NUM_DOC_ID</name>
+      <description>Num de identificação</description>
+      <type>DOCNUMBER</type>
+    </field>
+    <field>
+      <name>EMISS_DOC_ID</name>
+      <description>Orgao emissor</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>UF_DOC_ID</name>
+      <description>Estado emissor</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NUM_CPF</name>
+      <description>CPF</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>DATA_NASCIMENTO</name>
+      <description>Data de nascimento</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NOME_PAI</name>
+      <description>Nome do pai</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NOME_MAE</name>
+      <description>Nome da mãe</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>PERMISSAO</name>
+      <description>Permissao</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>ACC</name>
+      <description>ACC</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>CATEG</name>
+      <description>Categoria</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NUM_CNH</name>
+      <description>Número do registro</description>
+      <type>DOCNUMBER</type>
+    </field>
+    <field>
+      <name>DTVAL</name>
+      <description>Data de validade</description>
+      <type>DATE</type>
+    </field>
+    <field>
+      <name>DTPRIMHAB</name>
+      <description>Data da primeira habilitação</description>
+      <type>DATE</type>
+    </field>
+    <field>
+      <name>OBS</name>
+      <description>Observação</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>RENACH</name>
+      <description>Renach</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>DATA_EMISSAO</name>
+      <description>Data de emissão</description>
+      <type>DATE</type>
+    </field>
+    <field>
+      <name>LOCAL_EXPEDICAO</name>
+      <description>Local de expedição</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>EMISSOR</name>
+      <description>Emissor</description>
+      <type>TEXT</type>
+    </field>
+  </fields>
+  <extraFields />
+</template>

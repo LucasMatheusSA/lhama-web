@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <docType>GENERIC</docType>
+  <fields>
+    <field>
+      <name>NOME</name>
+      <description>Nome</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>RUA</name>
+      <description>Logradouro</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NUMERO</name>
+      <description>Número</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>SECAO</name>
+      <description>Complemento</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>BAIRRO</name>
+      <description>Bairro</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>LOCALIDADE</name>
+      <description>Localidade (Cidade/UF)</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>MUNICIPIO</name>
+      <description>Cidade</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>UF</name>
+      <description>Estado</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>CEP</name>
+      <description>CEP</description>
+      <type>NUMBER</type>
+    </field>
+    <field>
+      <name>DATA_VENCIMENTO</name>
+      <description>Data de vencimento</description>
+      <type>TEXT</type>
+    </field>
+  </fields>
+  <extraFields />
+</template>

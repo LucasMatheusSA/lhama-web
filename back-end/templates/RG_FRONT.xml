@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <docType>RG_FRONT</docType>
+  <fields>
+    <field>
+      <name>EMISSOR</name>
+      <description>Orgao Emissor</description>
+      <type>TEXT</type>
+    </field>
+  </fields>
+  <extraFields />
+</template>

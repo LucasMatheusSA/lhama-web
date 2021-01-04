@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <docType>GENERIC</docType>
+  <fields>
+    <field>
+      <name>NUM</name>
+      <description>Número</description>
+      <type>NUMBER</type>
+    </field>
+    <field>
+      <name>SERIE</name>
+      <description>Série</description>
+      <type>TEXT</type>
+    </field>
+    <field>
+      <name>NUM_RA</name>
+      <description>Número RA</description>
+      <type>NUMBER</type>
+    </field>
+    <field>
+      <name>NOME</name>
+      <description>Nome</description>
+      <type>NAME</type>
+    </field>
+    <field>
+      <name>EMISSAO</name>
+      <description>Emissão</description>
+      <type>TEXT</type>
+    </field>
+  </fields>
+  <extraFields />
+</template>
