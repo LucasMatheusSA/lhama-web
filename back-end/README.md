@@ -6,75 +6,141 @@ An interface to upload files to this backend service can be found [here](https:/
 
 ## Getting Started
 ```
+$ npm install
+```
+
+```
 $ npm start
 ```
 
 ## API
 
-[POST] Avatar
+### [GET] -> Busca imagem
+
+Endpoint:
 ```
-> POST /api/avatar/upload
+> GET /images/"Nome de uma imagem"
+```
+
+Response:
+```
+Retorna a imagem em binario.
+```
+
+
+### [POST] -> Lista imagens da pasta repositorio 
+
+Endpoint:
+```
+> POST /api/listImgs
+```
+
+Request:
+```
+{
+    "pag": 2,   // Número da página
+    "qtd": 5    // Quantidade de itens por página 
+}
+```
+
+Response:
+```
+{
+    "list": [
+        "Nome_do_arquivo.jpg",
+        "Nome_do_arquivo.jpg",
+        "Nome_do_arquivo.jpg",
+        "Nome_do_arquivo.jpeg",
+        "Nome_do_arquivo.jpg",
+    ],
+    "all": 28,      // Quantidade de elementos no total
+    "first": 10,    // Número do primeiro elemento da página
+    "last": 15      // Número do ultimo elemento da página
+}
+```
+
+### [GET] -> Retorna listagem de templates
+
+Endpoint:
+```
+> GET /api/listTemp
+```
+
+Response:
+```
+{
+    "data": [
+        {
+            "template": {
+                "docType": [
+                    "CNH"
+                ], 
+                [...]           // Listagem de templates e seus campos
+            }
+        }
+    ],
+    "list": [
+        [...]                   // Lista das files de templates
+    ]
+}
+```
+
+### [POST] -> Salva campos da imagem no xml  
+
+Endpoint:
+```
+> POST /api/saveFields
+```
+
+Request:
+```
+{
+    "file": "teste",        // Nome do arquivo
+    "data": {               // Estrutura do xml
+        "teste":[
+            {
+                "testoso1":
+                [
+                    "teste1"
+                ],
+                 "testoso2":
+                [
+                    "teste2"
+                ],
+                 "testoso3":
+                [
+                    "teste3"
+                ]
+            }
+        ]
+    }
+}
+```
+
+Response:
+```
+{
+    "status": 200,
+    "message": "Update do arquivo [./public/images-xml/teste.xml] feito com sucesso."
+}
+```
+
+## Extra
+
+### Upload de imagens (não finalizado)
+
+[POST] 
+```
+> POST /api/lhama/images
 ```
 
 Input:
 ```
-Form Data using key "avatar".
+Form Data usar chave "lhama".
 ```
 
 Output:
 ```
 {id: "String", url: "String"}
 ```
-
-[GET] Avatar
-```
-> GET /uploads/{avatarId}
-```
-
-Output:
-```
-The binary image.
-```
- 
-
-
-https://medium.com/desenvolvimento-com-node-js/upload-de-imagem-com-o-node-js-3c0fff6c6c61
-https://github.com/giuliana-bezerra/upload-avatar-backend       
-
-
-https://www.npmjs.com/package/xml2js
-https://attacomsian.com/blog/nodjs-edit-xml-file
-https://tutorialedge.net/nodejs/editing-xml-files-with-nodejs/
-https://stackoverflow.com/questions/38244545/node-js-remove-root-node-from-resulting-xml-using-xml2js/46054858
-https://stackoverflow.com/questions/59389686/add-comment-to-xml-with-nodejs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,14 +1,14 @@
 const config = require('../../app-config');
-const listImgs = require('../../service/service-imgs');
+const service = require('../../service/service-imgs');
 
-const directory = './public/images';
+const directory = config.path_images;
 
 module.exports = async (req, res, err) => {
     
     let pag = req.body.pag ;
     let qtd = req.body.qtd ;
 
-    let data = await listImgs.listImgs(directory);
+    let data = await service.listImgs(directory);
     let listReturn = [];
 
     if(pag <= parseInt( data.length / qtd ) + 1){
@@ -19,7 +19,7 @@ module.exports = async (req, res, err) => {
             listReturn.push(data[i]);
         }
 
-        res.status(200).json({ list: listReturn , all: data.length , first: first , last: last });
+        res.status(200).json({ list: listReturn , all: data.length , first: first , last: last - 1});
 
     }
 
