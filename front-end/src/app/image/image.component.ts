@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -8,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageComponent implements OnInit {
 
-  constructor() { }
+  link: String;
+  img: String;
+  all: Number; 
+  index: Number;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.initParam();
+  }
+
+  initParam(){
+    this.route.params.subscribe(params => {
+      debugger
+      this.all = params['qtd'];
+      this.img = params['img'];
+      this.index = params['num'];
+      this.link = "http://localhost:9999/images/" + params['img'];
+    });
   }
 
 }

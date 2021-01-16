@@ -5,7 +5,7 @@ import { ImageComponent } from './image/image.component';
 
 const routes: Routes = [
   { path: 'Home', component: HomeComponent },
-  { path: 'Image', component: ImageComponent },
+  { path: 'Image/:qtd/:num/:img', component: ImageComponent },
   { path: '',   redirectTo: '/Home', pathMatch: 'full' },
 ];
 

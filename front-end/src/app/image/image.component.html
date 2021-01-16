@@ -1,4 +1,8 @@
 <p>
-  image works!
+  {{img}}
 </p>
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+
+<div style="margin-left: 10%; margin-right: 10%; margin-top: 5%;">
+  <app-image-viewer [images]="[link]" [idContainer]="'id-image-viewer'" [loadOnInit]="true" [download]="false"></app-image-viewer>
+</div>
+

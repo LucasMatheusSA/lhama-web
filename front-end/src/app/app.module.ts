@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApiService } from './service/api.service';
+import { ImageViewerModule } from 'ng2-image-viewer';
 
 import { HomeComponent } from './home/home.component';
 import { ImageComponent } from './image/image.component';
@@ -20,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatFormFieldModule,
     MatListModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    ImageViewerModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
