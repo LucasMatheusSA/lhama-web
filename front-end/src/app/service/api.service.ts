@@ -31,8 +31,8 @@ export class ApiService {
     return this.http.get<any>(url + url_getTemp);
   }
 
-  saveFields (req) : Observable<any> {
+  saveFields (data) : Observable<any> {
 
-    return this.http.post<any>(url + url_getSave, req);
+    return this.http.post<any>(url + url_getSave, data);
   }
 }

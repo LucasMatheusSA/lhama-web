@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef  } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { ApiService } from '../service/api.service';
+import { Document } from '../model/Document.model';
+import {MatSnackBar,MatSnackBarHorizontalPosition,MatSnackBarVerticalPosition} from '@angular/material/snack-bar';
 
 
 @Component({
@@ -10,6 +12,14 @@ import { ApiService } from '../service/api.service';
 })
 export class ImageComponent implements OnInit {
 
+  horizontalPosition: MatSnackBarHorizontalPosition = 'right';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
+  @ViewChild('selectDocType') SelectDocType: any;
+  @ViewChild('formFields') FormFields: any;
+
+  data: Document;
+
   link: String;
   img: String;
   all: Number; 
@@ -18,7 +28,9 @@ export class ImageComponent implements OnInit {
   templates: any;
   images: any;
 
-  constructor(private route: ActivatedRoute, private ApiService: ApiService) { }
+  document: Document;
+
+  constructor(private route: ActivatedRoute, private ApiService: ApiService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.initParam();
@@ -54,6 +66,14 @@ export class ImageComponent implements OnInit {
     return this.templates.templateFields[temp];
   }
 
+  openSnackBar(msg) {
+    this.snackBar.open(msg, 'Fechar', {
+      duration: 2000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
+  }
+
   next(){
     let num: number = +this.index + 1;
     let element = this.images[num];
@@ -76,7 +96,37 @@ export class ImageComponent implements OnInit {
     }
   }
 
+
+
   save(){
+
+    var fields: any[] = [];
+
+    for(let i = 0; i < this.FormFields.nativeElement.length; i++){
+      let field = {
+        "description": [this.FormFields.nativeElement[i].name], "lst": [{ "result": [{ "value": [this.FormFields.nativeElement[i].value] }] }]
+      };
+      fields.push(field);
+    }
+
+    let data = {
+      "metadata": [{
+          "docType": [this.SelectDocType.value],
+          "bpp": ["24"],
+          "dpi": ["72"],
+          "orientation": ["1"],
+          "extraInfos": [{ "info": [{ "value": ["0"] }] }]
+      }],
+      "results": [{"field": fields}]
+    }
+
+    this.ApiService.saveFields({ "file": this.img, "data": data}).subscribe(response =>{
+      if(response.status == 200){
+        this.openSnackBar("Sucesso ao salvar campos");
+      }else{
+        this.openSnackBar("Erro ao salvar campos!");
+      }
+    });
 
   }
 

@@ -28,6 +28,7 @@ module.exports = async (req, res) => {
         let template = await service.convert(directory + "/" + temps[i]);
 
         let templateFields = template.template.fields[0].field;
+        console.log(template.template.fields[0]);
         let docType = template.template.docType[0];
 
         for(let i = 0; i < templateFields.length; i++){
