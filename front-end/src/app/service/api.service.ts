@@ -16,6 +16,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  getImage (img) : Observable<any> {
+
+    return this.http.get<any>(url + "/images/" + img);
+  }
+
   getImages (req) : Observable<any> {
 
     return this.http.post<any>(url + url_getImg, req);

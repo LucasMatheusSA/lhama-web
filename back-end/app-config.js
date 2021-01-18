@@ -8,9 +8,9 @@ config.config_img.path = 'public/images';
 config.config_img.path_name = 'images';
 
 // paths
-config.path_images = './public/images';
-config.path_template = './templates';
-config.path_fields_xml = './public/images-xml';
+config.path_images = './public/images'; // Caminho fonte das imagens
+config.path_template = './templates';  // Caminho fonte dos templates
+config.path_fields_xml = './public/images-xml'; // Caminho de destinho dos xml's
 
 
 module.exports = config;

@@ -1,8 +1,41 @@
-<p>
-  {{img}}
-</p>
 
-<div style="margin-left: 10%; margin-right: 10%; margin-top: 5%;">
-  <app-image-viewer [images]="[link]" [idContainer]="'id-image-viewer'" [loadOnInit]="true" [download]="false"></app-image-viewer>
+<div class="format">
+  <h2>{{img}} <button style="margin-left: 80%;" mat-button (click)="drawer.toggle()" color="primary">Indexar</button></h2>
+  <mat-divider></mat-divider>
 </div>
+
+<mat-drawer-container [hasBackdrop]="false">
+
+  <mat-drawer #drawer [mode]="side" style="width: 25%;">
+    <div style="margin-left: 10%;">
+      <h3>Indexar</h3>
+    </div>
+    <div style="margin: auto;">
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo de Documento</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let item of templates.list" value="item">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (click)="back()" ><mat-icon mat-list-icon>navigate_before</mat-icon></mat-button-toggle>
+        <mat-button-toggle (click)="drawer.toggle()" >Cancelar</mat-button-toggle>
+        <mat-button-toggle (click)="save()" >Salvar</mat-button-toggle>
+        <mat-button-toggle (click)="next()" ><mat-icon mat-list-icon>navigate_next</mat-icon></mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="format">
+      <app-image-viewer [images]="[link]" [idContainer]="'id-image-viewer'" [loadOnInit]="true" [download]="false"
+      [showPDFOnlyOption]="false" ></app-image-viewer>
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+
 
