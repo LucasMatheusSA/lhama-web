@@ -27,7 +27,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -59,7 +59,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatDividerModule,
     MatSidenavModule,
     MatButtonToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

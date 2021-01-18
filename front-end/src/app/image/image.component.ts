@@ -50,6 +50,10 @@ export class ImageComponent implements OnInit {
     });
   }
 
+  templateFields(temp){
+    return this.templates.templateFields[temp];
+  }
+
   next(){
     let num: number = +this.index + 1;
     let element = this.images[num];

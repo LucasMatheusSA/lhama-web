@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
-  <docType>RG_BACK</docType>
+  <docType>RG_VERSO</docType>
   <fields>
     <field>
       <name>NUM_RG</name>

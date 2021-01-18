@@ -10,13 +10,30 @@
     <div style="margin-left: 10%;">
       <h3>Indexar</h3>
     </div>
-    <div style="margin: auto;">
+    <div style="margin-left: 10%;">
       <mat-form-field appearance="fill">
         <mat-label>Tipo de Documento</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let item of templates.list" value="item">{{item}}</mat-option>
+        <mat-select [(value)]="selectedValue">
+          <mat-option *ngFor="let item of templates.list" value="{{item}}">{{item}}</mat-option>
         </mat-select>
       </mat-form-field>
+
+      <mat-divider></mat-divider>
+
+      <br>
+
+      <div style="margin-right: 10%;">
+        <form class="input-form">
+          <mat-form-field class="input-full-width" *ngFor="let item of templates.templateFields[selectedValue]">
+            <mat-label>{{item.label}}</mat-label>
+            <input type="{{item.type}}" matInput placeholder="{{item.desc}}">
+          </mat-form-field>
+        </form>
+      </div>
+
+      <mat-divider></mat-divider>
+      
+      <br>
 
       <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
         <mat-button-toggle (click)="back()" ><mat-icon mat-list-icon>navigate_before</mat-icon></mat-button-toggle>
