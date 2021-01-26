@@ -63,16 +63,15 @@ Endpoint:
 Response:
 ```
 {
-    "data": [
-        {
-            "template": {
-                "docType": [
-                    "CNH"
-                ], 
-                [...]           // Listagem de templates e seus campos
-            }
-        }
-    ],
+    "templateFields": {
+        "CNH": [
+            { 
+                "label": "NOME", 
+                "desc": "Nome", 
+                "type": "text" 
+            },
+            [...]           // Listagem de templates e seus campos
+    },
     "list": [
         [...]                   // Lista das files de templates
     ]
